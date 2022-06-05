@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@300;400;500;700&family=Syncopate:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="form-display">
+      <div class="overlay"></div>
+      <form id="bookInput">
+        <header>
+          <h1>Add a Book</h1>
+
+          <p class="close-btn-main">&times;</p>
+        </header>
+        <div>
+          <label for="title">Title</label><br />
+          <input type="text" id="title" name="title" required /><br />
+        </div>
+
+        <div>
+          <label for="author">Author</label><br />
+          <input type="text" id="author" name="author" required />
+        </div>
+
+        <div>
+          <label for="pages">Pages</label><br />
+          <input type="number" id="pages" name="pages" required />
+        </div>
+
+        <div class="read-section">
+          <label for="read">Have you read this book?</label>
+          <input type="checkbox" id="read" name="read" />
+
+          <div class="popover">
+            <header>
+              <h2>Update</h2>
+              <p class="close-btn-pop">&times;</p>
+            </header>
+            <div>
+              <label for="read">Have you read this book?</label>
+              <input type="checkbox" id="read2" name="read2" />
+            </div>
+            <button class="update">Update</button>
+          </div>
+        </div>
+
+        <button type="submit" id="submit" class="primary-cta" value="submit">
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <nav>
+      <div id="logo">BookList</div>
+      <button id="addBook" class="primary-cta">
+        Add a Book <span>&plus;</span>
+      </button>
+    </nav>
+
+    <main>
+      <table id="book-list">
+        <thead>
+          <tr>
+            <th style="width: 25%">Title</th>
+            <th style="width: 25%">Author</th>
+            <th style="width: 10%">Pages</th>
+            <th style="width: 10%">Read?</th>
+            <th style="width: 20%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="initial-entry">
+            <td>You have no books on your list</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
